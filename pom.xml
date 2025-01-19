@@ -4,37 +4,14 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>io.github.lubin-8828</groupId>
+    <groupId>com.lubin</groupId>
     <artifactId>task-framework</artifactId>
     <version>1.0.0</version>
     <packaging>jar</packaging>
     
     <name>Task Framework</name>
     <description>一个简单的Java多任务执行框架</description>
-    <url>https://github.com/lubin-8828/taskManager</url>
     
-    <licenses>
-        <license>
-            <name>The Apache License, Version 2.0</name>
-            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
-        </license>
-    </licenses>
-
-    <developers>
-        <developer>
-            <name>lubin</name>
-            <email>您的邮箱</email>
-            <organization>lubin-8828</organization>
-            <organizationUrl>https://github.com/lubin-8828</organizationUrl>
-        </developer>
-    </developers>
-
-    <scm>
-        <connection>scm:git:git://github.com/lubin-8828/taskManager.git</connection>
-        <developerConnection>scm:git:ssh://github.com:lubin-8828/taskManager.git</developerConnection>
-        <url>https://github.com/lubin-8828/taskManager/tree/main</url>
-    </scm>
-
     <properties>
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -80,47 +57,17 @@
                     </execution>
                 </executions>
             </plugin>
-            <!-- 添加 Javadoc 插件 -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-javadoc-plugin</artifactId>
-                <version>3.5.0</version>
-                <executions>
-                    <execution>
-                        <id>attach-javadocs</id>
-                        <goals>
-                            <goal>jar</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-            
-            <!-- GPG 签名插件 -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-gpg-plugin</artifactId>
-                <version>3.1.0</version>
-                <executions>
-                    <execution>
-                        <id>sign-artifacts</id>
-                        <phase>verify</phase>
-                        <goals>
-                            <goal>sign</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
         </plugins>
     </build>
 
     <distributionManagement>
-        <snapshotRepository>
-            <id>ossrh</id>
-            <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
-        </snapshotRepository>
         <repository>
-            <id>ossrh</id>
-            <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+            <id>2515386-release-nkFmW0</id>
+            <url>https://packages.aliyun.com/678c8df764cad1150f180715/maven/2515386-release-nkfmw0</url>
         </repository>
+        <snapshotRepository>
+            <id>2515386-snapshot-nkFmW0</id>
+            <url>https://packages.aliyun.com/678c8df764cad1150f180715/maven/2515386-snapshot-nkfmw0</url>
+        </snapshotRepository>
     </distributionManagement>
 </project>
